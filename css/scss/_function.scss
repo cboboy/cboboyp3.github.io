@@ -1,0 +1,5 @@
+@mixin hover-shadow {
+    box-shadow: 0 3px 10px darken($color: $color-shadow, $amount: 20%);
+    opacity: 70%;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+* button{
+    cursor: pointer;
+}
+
+h1, h4, h5{
+    font-family: 'Shrikhand', sans-serif;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 800;
+    padding-inline: 20px;
+    margin-bottom: 10px;
+}
+
+h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+
+h6{
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.desc{
+    margin: 10px 0 30px 0;
+    font-size: 19px;
+    font-weight: 300;
+
+}
+
+h3, p{
+    font-family: 'roboto', sans-serif;
+    color: black;
+}
+
+ul {
+    list-style-type: none; /* enleve la puce <li> */
+    padding-inline-start:unset;  /* gere le declage devant <li> */
+}
+
+a{
+    text-decoration: none;  /* enleve trait sous lien */
+    
+    .inoir{
+        color: #000;
+    }
+}
+body{
+    margin: none;
+    font-family: "roboto", sans-serif;
+}
+@media screen and (min-width: 768px){
+    body{
+        margin: 10px;
+    }
+}

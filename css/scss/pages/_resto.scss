@@ -1,0 +1,148 @@
+#ban-resto{
+    display: flex;
+    flex-direction: column;
+    height: 310px;
+    width: 100%;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .br-nom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 0px;
+        background-color: #f2f2f2;
+        padding: 10px 20px 0 20px;
+        border-radius: 40px 40px 0 0;
+        height: 100px;
+        width: 100%;
+        position: relative;
+        margin-top: -98px;
+        .coeur{
+            position: relative;
+            width: min-content;
+            font-size: 30px;
+            color: black;
+         &:hover .t-remplit{
+           color: red;
+           transform: scale(2);
+           transition: all 500ms ease-in-out;      
+         }
+         &:hover i{
+           transform: scale(0.5);
+           transition: all 500ms linear;
+         }
+         .t-remplit{
+           position: absolute;
+           top: 0px;
+           left: 0px;
+           color: red;
+           transform: scale(0);         
+           } 
+        }
+    }
+}
+// banniere des plats
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    justify-content: center;
+    max-width: 550px;
+    row-gap: 20px;
+    padding: 15px 20px 20px 20px;
+    .border{
+        padding-top: 12px;
+        width: 40px;
+        border-top: 3px $color-tertiaire solid;
+    }
+    .plat{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        border-radius: 14px;
+        box-shadow: 0 3px 3px $color-shadow;
+        height: 70px;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+               @include hover-shadow;
+            & .plat_valid{
+                width: 75px;
+                transition: all 1s;
+                &_check{
+                    animation: anim-check 800ms 0s linear;
+                }
+            } 
+        }
+            .plat_nom{
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                width: 100%;
+                padding: 0 10px;
+                
+                h3{
+                white-space: nowrap;
+                overflow: hidden;    
+                text-overflow: ellipsis;
+                margin: 8px 0;
+                }
+        }
+            .plat_prix{
+                display: flex;
+                justify-content: space-between;
+                box-sizing: border-box;
+                p{
+                    white-space: nowrap;
+                    overflow: hidden;    
+                    text-overflow: ellipsis;
+                    margin: 0;
+                    +.prix{
+                        font-weight: bold;
+                        overflow: initial;
+                    }
+                }
+            }
+            .plat_valid{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                width: 0px;
+                background-color: $color-tertiaire;
+                &_check{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    color: $color-tertiaire;
+                    background-color: white;
+                }
+            }
+    }
+    .bp-commande{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            width: 200px;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 18px;
+            background: linear-gradient( $color-secondaire, $color-primaire);
+            color: #fff;
+            border: none;
+            box-shadow: 0 3px 3px $color-shadow;
+            &:hover{
+                @include hover-shadow
+            }
+        }
+    }
+    
+}

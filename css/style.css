@@ -315,9 +315,8 @@ template {
 
 .ohmyfood {
   color: #9356DC;
-  font-size: 15vw;
+  font-size: 10vw;
   letter-spacing: 10px;
-  margin-bottom: 250px;
   animation: rotate 1400ms linear, flash 1s linear infinite;
   animation-fill-mode: both; }
 
@@ -369,12 +368,19 @@ template {
 .ohmyfood:nth-child(8) {
   animation-delay: 1.5s; }
 
-header #logo {
-  text-align: center;
-  width: 100%;
-  padding: 15px 0; }
-  header #logo img {
-    height: 30px; }
+@keyframes anim-check {
+  0% {
+    transform: rotate(360deg); } }
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px; }
+  header #logo {
+    text-align: center;
+    width: 100%; }
+    header #logo img {
+      height: 30px; }
 
 nav {
   background-color: #f2f2f2;
@@ -415,12 +421,13 @@ nav #recherche {
     color: #fff;
     background: linear-gradient(#FF79DA, #9356DC);
     border: none;
-    box-shadow: 0 3px 10px #a39f9f;
+    box-shadow: 0 3px 10px #e2e1e1;
     transform: scale(1);
     transition: all 450ms; }
     #info-nav button:hover {
-      transform: scale(1.2);
-      box-shadow: 0 3px 10px #8a8585; }
+      box-shadow: 0 3px 10px #b0adad;
+      opacity: 70%;
+      cursor: pointer; }
 
 #fonct {
   padding: 27px 0 32px 0;
@@ -435,11 +442,13 @@ nav #recherche {
   position: relative;
   border-radius: 25px;
   background-color: #f2f2f2;
-  box-shadow: 0 3px 10px #a39f9f;
+  box-shadow: 0 3px 10px #e2e1e1;
   transition: 450ms;
   z-index: 1; }
   .banniere-fonction:hover {
-    box-shadow: 0 3px 10px #8a8585;
+    box-shadow: 0 3px 10px #b0adad;
+    opacity: 70%;
+    cursor: pointer;
     color: #9356DC; }
     .banniere-fonction:hover::after {
       opacity: 1; }
@@ -496,10 +505,12 @@ nav #recherche {
   background-color: #fff;
   border-radius: 15px 15px;
   height: 250px;
-  box-shadow: 0px 0px 8px #949292;
+  box-shadow: 0px 0px 8px #e2e1e1;
   position: relative; }
   .bloc-restaurant:hover {
-    box-shadow: 0 3px 10px #8a8585; }
+    box-shadow: 0 3px 10px #b0adad;
+    opacity: 70%;
+    cursor: pointer; }
 
 .bloc-restaurant img {
   object-fit: cover;
@@ -522,15 +533,30 @@ nav #recherche {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 29%; }
+  height: 29%;
+  padding-right: 20px; }
   .nav-br .contenu-nbr h3 {
     margin: 0 0 0 15px; }
   .nav-br .contenu-nbr p {
     margin: 5px 0 0 15px; }
-  .nav-br i {
+  .nav-br .coeur {
+    position: relative;
+    width: min-content;
     font-size: 30px;
-    margin-right: 15px;
     color: black; }
+    .nav-br .coeur:hover .t-remplit {
+      color: red;
+      transform: scale(2);
+      transition: all 500ms ease-in-out; }
+    .nav-br .coeur:hover i {
+      transform: scale(0.5);
+      transition: all 500ms linear; }
+    .nav-br .coeur .t-remplit {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: red;
+      transform: scale(0); }
 
 @media screen and (min-width: 768px) {
   #ecran-restaurant a {
@@ -568,7 +594,7 @@ footer {
 * button {
   cursor: pointer; }
 
-h1, h5 {
+h1, h4, h5 {
   font-family: 'Shrikhand', sans-serif; }
 
 h2 {
@@ -576,6 +602,16 @@ h2 {
   font-weight: 800;
   padding-inline: 20px;
   margin-bottom: 10px; }
+
+h4 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0; }
+
+h6 {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0 0 10px 0; }
 
 .desc {
   margin: 10px 0 30px 0;
@@ -605,3 +641,131 @@ body {
 @media screen and (min-width: 768px) {
   body {
     margin: 10px; } }
+
+#ban-resto {
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+  width: 100%; }
+  #ban-resto img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+  #ban-resto .br-nom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0px;
+    background-color: #f2f2f2;
+    padding: 10px 20px 0 20px;
+    border-radius: 40px 40px 0 0;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    margin-top: -98px; }
+    #ban-resto .br-nom .coeur {
+      position: relative;
+      width: min-content;
+      font-size: 30px;
+      color: black; }
+      #ban-resto .br-nom .coeur:hover .t-remplit {
+        color: red;
+        transform: scale(2);
+        transition: all 500ms ease-in-out; }
+      #ban-resto .br-nom .coeur:hover i {
+        transform: scale(0.5);
+        transition: all 500ms linear; }
+      #ban-resto .br-nom .coeur .t-remplit {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: red;
+        transform: scale(0); }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  justify-content: center;
+  max-width: 550px;
+  row-gap: 20px;
+  padding: 15px 20px 20px 20px; }
+  .menu .border {
+    padding-top: 12px;
+    width: 40px;
+    border-top: 3px #99E2D0 solid; }
+  .menu .plat {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-radius: 14px;
+    box-shadow: 0 3px 3px #e2e1e1;
+    height: 70px;
+    overflow: hidden;
+    cursor: pointer; }
+    .menu .plat:hover {
+      box-shadow: 0 3px 10px #b0adad;
+      opacity: 70%;
+      cursor: pointer; }
+      .menu .plat:hover .plat_valid {
+        width: 75px;
+        transition: all 1s; }
+        .menu .plat:hover .plat_valid_check {
+          animation: anim-check 800ms 0s linear; }
+    .menu .plat .plat_nom {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 100%;
+      padding: 0 10px; }
+      .menu .plat .plat_nom h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 8px 0; }
+    .menu .plat .plat_prix {
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box; }
+      .menu .plat .plat_prix p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0; }
+        .menu .plat .plat_prix p + .prix {
+          font-weight: bold;
+          overflow: initial; }
+    .menu .plat .plat_valid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 0px;
+      background-color: #99E2D0; }
+      .menu .plat .plat_valid_check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #99E2D0;
+        background-color: white; }
+  .menu .bp-commande {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .menu .bp-commande button {
+      width: 200px;
+      height: 60px;
+      border-radius: 30px;
+      font-size: 18px;
+      background: linear-gradient(#FF79DA, #9356DC);
+      color: #fff;
+      border: none;
+      box-shadow: 0 3px 3px #e2e1e1; }
+      .menu .bp-commande button:hover {
+        box-shadow: 0 3px 10px #b0adad;
+        opacity: 70%;
+        cursor: pointer; }

@@ -1,0 +1,69 @@
+header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+     #logo{
+        text-align: center;
+        width: 100%;
+        img{
+            height: 30px;
+        }
+    }
+}
+
+nav{
+    background-color: $color-back;
+    padding-bottom: 36px;
+}
+
+nav #recherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-recherche;
+    height: 50px;
+    width: 100%;
+    box-shadow: inset 0 5px 5px $color-brecherche;
+    div{
+            padding-left: 58px;
+        }
+    #site-search{
+        padding: 10px;
+        font-size: 17px;
+        font-weight: 700;
+        background-color: inherit;
+        &:focus{
+            border-radius: 30px;            
+        }
+    }
+    button, #site-search{
+        border: none;
+    }
+    button i{
+        font-size: 20px;
+    }
+}
+
+#info-nav{
+    padding: 20px 20px;
+    text-align: center;
+    h2{
+        margin-left: 20px;
+    }
+    button{
+        height: 54px;
+        width: 230px;
+        border-radius: 30px;
+        font-size: 17px;
+        color: #fff;
+        background: linear-gradient( $color-secondaire, $color-primaire);
+        border: none;
+        box-shadow: 0 3px 10px $color-shadow;
+        transform: scale(1);
+        transition: all 450ms;
+        &:hover{
+            @include hover-shadow
+        }
+    }
+}
+
