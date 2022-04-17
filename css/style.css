@@ -307,12 +307,14 @@ template {
   position: absolute;
   height: 100%;
   width: 100%;
+  max-width: 1300px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: -1; }
 
+/* Animation chargement loader */
 .ohmyfood {
   color: #9356DC;
   font-size: 10vw;
@@ -371,6 +373,29 @@ template {
 @keyframes anim-check {
   0% {
     transform: rotate(360deg); } }
+
+/* Animation chargement menu */
+.plat {
+  animation: kplat 800ms forwards; }
+
+@keyframes kplat {
+  100% {
+    height: 70px; } }
+
+.plat:nth-child(1) {
+  animation-delay: 0.1s; }
+
+.plat:nth-child(2) {
+  animation-delay: 0.5s; }
+
+.plat:nth-child(3) {
+  animation-delay: 0.9s; }
+
+.plat:nth-child(4) {
+  animation-delay: 1.3s; }
+
+.plat:nth-child(5) {
+  animation-delay: 1.7s; }
 
 header {
   display: flex;
@@ -635,12 +660,10 @@ a {
     color: #000; }
 
 body {
-  margin: none;
-  font-family: "roboto", sans-serif; }
-
-@media screen and (min-width: 768px) {
-  body {
-    margin: 10px; } }
+  font-family: "roboto", sans-serif;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 10px; }
 
 #ban-resto {
   display: flex;
@@ -700,7 +723,7 @@ body {
     justify-content: flex-end;
     border-radius: 14px;
     box-shadow: 0 3px 3px #e2e1e1;
-    height: 70px;
+    height: 0px;
     overflow: hidden;
     cursor: pointer; }
     .menu .plat:hover {

@@ -54,11 +54,12 @@ a{
     }
 }
 body{
-    margin: none;
     font-family: "roboto", sans-serif;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 10px;
 }
 @media screen and (min-width: 768px){
     body{
-        margin: 10px;
     }
 }
