@@ -608,11 +608,6 @@ footer {
   footer a {
     color: #fff; }
 
-@media screen and (min-width: 768px) {
-  ul {
-    display: flex;
-    justify-content: space-between; } }
-
 * {
   box-sizing: border-box; }
 
@@ -705,12 +700,17 @@ body {
         color: red;
         transform: scale(0); }
 
+#carte {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  max-width: 100%; }
+
 .menu {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
   justify-content: center;
-  max-width: 550px;
+  width: 100%;
   row-gap: 20px;
   padding: 15px 20px 20px 20px; }
   .menu .border {
@@ -778,7 +778,8 @@ body {
   .menu .bp-commande {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    width: 100%; }
     .menu .bp-commande button {
       width: 200px;
       height: 60px;
@@ -792,3 +793,27 @@ body {
         box-shadow: 0 3px 10px #b0adad;
         opacity: 70%;
         cursor: pointer; }
+
+/* ------------------format tablette- & ordinateur----------- */
+@media screen and (min-width: 768px) {
+  ul {
+    display: flex;
+    justify-content: space-between; }
+  #ban-resto .br-nom {
+    justify-content: space-around; }
+  #carte {
+    align-items: flex-start; } }
+
+/* ------------------format tablette------------------------ */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .menu {
+    width: 49%; }
+    .menu:last-child {
+      padding-top: 150px; } }
+
+/* ------------------format ordinateur------------------------ */
+@media screen and (min-width: 1200px) {
+  .menu {
+    width: 33%; }
+    .menu:last-child {
+      width: 100%; } }

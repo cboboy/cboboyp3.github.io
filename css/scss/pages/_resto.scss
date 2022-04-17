@@ -45,12 +45,17 @@
     }
 }
 // banniere des plats
+#carte{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    max-width: 100%;
+}
 .menu{
     display: flex;
     flex-direction: column;
-    background-color: #f2f2f2;
     justify-content: center;
-    max-width: 550px;
+    width: 100%;
     row-gap: 20px;
     padding: 15px 20px 20px 20px;
     .border{
@@ -130,6 +135,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
         button{
             width: 200px;
             height: 60px;

@@ -1,0 +1,33 @@
+/* ------------------format tablette- & ordinateur----------- */
+@media screen and (min-width: 768px){
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    #ban-resto .br-nom{
+        justify-content: space-around;
+    }
+    #carte{
+        align-items: flex-start;
+    }
+}
+
+/* ------------------format tablette------------------------ */
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .menu{
+        width: 49%;
+        &:last-child{
+            padding-top: 150px;
+        }
+    }
+}
+
+/* ------------------format ordinateur------------------------ */
+@media screen and (min-width: 1200px){
+    .menu{
+        width: 33%;
+        &:last-child{
+            width: 100%;
+        }
+    }
+}
