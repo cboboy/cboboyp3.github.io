@@ -6,4 +6,5 @@ $color-nouveau: rgb(54, 133, 106);
 $color-recherche: rgba(173, 173, 173, 0.212);
 $color-brecherche: darken($color-recherche,10%);
 $color-shadow: #e2e1e1;
-$color-back: #f2f2f2;
+$color-back: rgb(246, 246, 246);
+$color-btn: linear-gradient(-10deg, $color-primaire, $color-secondaire);

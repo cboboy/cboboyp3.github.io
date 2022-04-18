@@ -1,57 +1,28 @@
-#chargement {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-  }
-
   /* Animation chargement loader */
   .ohmyfood{
       color: #9356DC;
       font-size: 10vw;
       letter-spacing: 10px;
-    animation: rotate 1400ms linear, flash 1s linear infinite;
-    // animation: flash 1s linear infinite;
-      animation-fill-mode: both;
+      animation: 1400ms linear flash forwards;
   }
-  #page{
-      z-index: 1;
-      animation: page 0ms 3s both;
-  }
+  
+  /* animation lettre logo loader */
 @keyframes flash {
     0% {
         color: #9356DC;
         text-shadow: 0 0 7px #9356DC;
+        transform: rotatex(360deg);
     }
-    35% {
+    15% {
         color: #FF79DA;
     }
-    70% {
+    30% {
         color: #99E2D0;
         text-shadow: 0 0 7px #9356DC;
     }
 }
 
-@keyframes rotate {
-    0%, 80% {
-        transform: rotatex(360deg);
-    }
-}
-
-@keyframes page{
-    0%{
-        transform: translateX(-9999px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
+/* delai depart animation lettre */
 .ohmyfood:nth-child(1){
     animation-delay: 0.1s;
 }
@@ -77,9 +48,27 @@
     animation-delay: 1.5s;
 }
 
+/* delai apparition su site */
+#page{
+      z-index: 1;
+      animation: page 0ms 3s both;
+  }
+
+@keyframes page{
+    0%{
+        transform: translateX(-9999px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Rotation 360 check menu */
 @keyframes anim-check {
     0%{
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 

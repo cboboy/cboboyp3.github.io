@@ -1,3 +1,4 @@
+/* banniere resto pages menus */
 #ban-resto{
     display: flex;
     flex-direction: column;
@@ -13,42 +14,21 @@
         justify-content: space-between;
         align-items: center;
         bottom: 0px;
-        background-color: #f2f2f2;
+        background-color: $color-back;
         padding: 10px 20px 0 20px;
         border-radius: 40px 40px 0 0;
         height: 100px;
         width: 100%;
         position: relative;
         margin-top: -98px;
-        .coeur{
-            position: relative;
-            width: min-content;
-            font-size: 30px;
-            color: black;
-         &:hover .t-remplit{
-           color: red;
-           transform: scale(2);
-           transition: all 500ms ease-in-out;      
-         }
-         &:hover i{
-           transform: scale(0.5);
-           transition: all 500ms linear;
-         }
-         .t-remplit{
-           position: absolute;
-           top: 0px;
-           left: 0px;
-           color: red;
-           transform: scale(0);         
-           } 
-        }
+        @include coeur
     }
 }
 // banniere des plats
 #carte{
     display: flex;
     flex-wrap: wrap;
-    background-color: #f2f2f2;
+    background-color: $color-back;
     max-width: 100%;
 }
 .menu{
@@ -68,6 +48,7 @@
         flex-direction: row;
         justify-content: flex-end;
         border-radius: 14px;
+        background-color: #fff;
         box-shadow: 0 3px 3px $color-shadow;
         height: 0px;
         overflow: hidden;
@@ -127,7 +108,7 @@
                     width: 20px;
                     height: 20px;
                     color: $color-tertiaire;
-                    background-color: white;
+                    background-color: #fff;
                 }
             }
     }
@@ -141,7 +122,7 @@
             height: 60px;
             border-radius: 30px;
             font-size: 18px;
-            background: linear-gradient( $color-secondaire, $color-primaire);
+            background: $color-btn;
             color: #fff;
             border: none;
             box-shadow: 0 3px 3px $color-shadow;

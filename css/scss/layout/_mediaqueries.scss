@@ -10,6 +10,13 @@
     #carte{
         align-items: flex-start;
     }
+    #restaurant #ecran-restaurant a{
+        width: 48%;
+    }
+    .bloc-restaurant{
+        height:40vw; /* rapport a width */
+        max-height: 350px;
+    }
 }
 
 /* ------------------format tablette------------------------ */

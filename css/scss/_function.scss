@@ -1,5 +1,31 @@
+/* effet ombre sur hover */
 @mixin hover-shadow {
     box-shadow: 0 3px 10px darken($color: $color-shadow, $amount: 20%);
     opacity: 70%;
     cursor: pointer;
+}
+
+/* mise en forme coeur et hover coeur */
+@mixin coeur {
+    .coeur{
+        position: relative;
+        width: min-content;
+        font-size: 30px;
+        color: black;
+        &:hover .t-remplit{
+          transform: scale(2);
+            transition: all 500ms ease-in-out;      
+        }
+        &:hover i{
+         transform: scale(0.5);
+         transition: all 500ms linear;
+        }
+        .t-remplit{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            color: $color-primaire;
+            transform: scale(0);         
+        }    
+    }
 }
