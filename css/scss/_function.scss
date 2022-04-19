@@ -13,6 +13,7 @@
         font-size: 30px;
         color: black;
         &:hover .t-remplit{
+            cursor: pointer;
           transform: scale(2);
             transition: all 500ms ease-in-out;      
         }

@@ -574,6 +574,7 @@ nav {
       font-size: 30px;
       color: black; }
       .bloc-restaurant .nav-br .coeur:hover .t-remplit {
+        cursor: pointer;
         transform: scale(2);
         transition: all 500ms ease-in-out; }
       .bloc-restaurant .nav-br .coeur:hover i {
@@ -687,6 +688,7 @@ body {
       font-size: 30px;
       color: black; }
       #ban-resto .br-nom .coeur:hover .t-remplit {
+        cursor: pointer;
         transform: scale(2);
         transition: all 500ms ease-in-out; }
       #ban-resto .br-nom .coeur:hover i {
