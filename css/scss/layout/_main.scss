@@ -1,195 +1,193 @@
 /* ----------Animation loader------------ */
 #chargement {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
 }
 
 /* ---------- nav recherche------------ */
-nav{
-    background-color: $color-back;
-    padding-bottom: 36px;
-    #recherche{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-recherche;
-        height: 50px;
-        width: 100%;
-        box-shadow: inset 0 5px 5px $color-brecherche;
-        div{
-                padding-left: 58px;
-            }
-        #site-search{
-            padding: 10px;
-            font-size: 17px;
-            font-weight: 700;
-            background-color: inherit;
-            &:focus{
-                border-radius: 30px;            
-            }
-        }
-        button, #site-search{
-            border: none;
-        }
-        button i{
-            font-size: 20px;
-        }
+nav {
+  background-color: $color-back;
+  padding-bottom: 36px;
+  #recherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-recherche;
+    height: 50px;
+    width: 100%;
+    box-shadow: inset 0 5px 5px $color-brecherche;
+    // div {
+    //   padding-left: 58px;
+    // }
+    #site-search {
+      padding: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      width: 156px;
+      border: none;
+      background-color: transparent;
+      &:focus {
+        border-radius: 30px;
+      }
     }
-    #info-nav{
-        padding: 20px 20px;
-        text-align: center;
-        h2{
-            margin-left: 20px;
-        }
-        button{
-            height: 54px;
-            width: 230px;
-            border-radius: 30px;
-            font-size: 17px;
-            color: #fff;
-            background: $color-btn;
-            border: none;
-            box-shadow: 0 3px 10px $color-shadow;
-            transform: scale(1);
-            transition: all 450ms;
-            &:hover{
-                @include hover-shadow
-            }
-        }
+    button {
+      border: none;
     }
+    button i {
+      font-size: 20px;
+    }
+  }
+  #info-nav {
+    padding: 20px 20px;
+    text-align: center;
+    h2 {
+      margin-left: 20px;
+    }
+    button {
+      height: 54px;
+      width: 230px;
+      border-radius: 30px;
+      font-size: 17px;
+      color: #fff;
+      background: $color-btn;
+      border: none;
+      box-shadow: 0 3px 10px $color-shadow;
+      transform: scale(1);
+      transition: all 450ms;
+      &:hover {
+        @include hover-shadow-opacity;
+      }
+    }
+  }
 }
-
-
 
 /* ----------liste fonctionnement------------ */
-#fonct{
-    padding: 27px 0 32px 20px;
-    background-color: #fff;
-    .banniere-fonction{
-        margin: 30px 20px 30px 12px;
-        display: flex;
-        align-items: center;
-        height: 70px;
-        width: auto;
-        position: relative;
-        border-radius: 25px;
-        background-color: $color-back;
-        box-shadow: 0 3px 10px $color-shadow;
-        transition: 450ms;
-        z-index: 1;
-        &:hover{
-            @include hover-shadow;
-            color: $color-primaire;
-            &::after{
-                opacity: 1;
-            }
-        }
-        &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: 25px;
-        background-color: lighten($color: $color-secondaire, $amount: 22%);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 450ms;
-        }
-        i{
-            padding-inline: 7px;
-            font-size: 1.2em;
-        }
-        .p-ibf{
-            padding-inline: 14px;
-            font-weight: bold;
-        }
-        .tag-bf{
-            position: relative;
-            right: 13px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 27px;
-            width: 27px;
-            border-radius: 15px;
-            background-color: $color-primaire;
-            p{
-                color: #fff;
-            }
-        }
+#fonct {
+  padding: 27px 0 32px 20px;
+  background-color: #fff;
+  .banniere-fonction {
+    margin: 30px 20px 30px 12px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: auto;
+    position: relative;
+    border-radius: 25px;
+    background-color: $color-back;
+    box-shadow: 0 3px 10px $color-shadow;
+    transition: 450ms;
+    z-index: 1;
+    &:hover {
+      @include hover-shadow;
+      color: $color-primaire;
+      &::after {
+        opacity: 1;
+      }
     }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 25px;
+      background-color: lighten($color: $color-secondaire, $amount: 22%);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 450ms;
+    }
+    i {
+      padding-inline: 7px;
+      font-size: 1.2em;
+    }
+    .p-ibf {
+      padding-inline: 14px;
+      font-weight: bold;
+    }
+    .tag-bf {
+      position: relative;
+      right: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 27px;
+      width: 27px;
+      border-radius: 15px;
+      background-color: $color-primaire;
+      p {
+        color: #fff;
+      }
+    }
+  }
 }
-
-
 
 /* ----------presentation restaurants------------ */
-#restaurant{
+#restaurant {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-back;
+  padding-bottom: 30px;
+  padding: 20px 20px 64px 20px;
+  #ecran-restaurant {
     display: flex;
-    flex-direction: column;
-    background-color: #f2f2f2;
-    padding-bottom: 30px;
-    padding: 20px;
-    #ecran-restaurant{
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 20px;
-        column-gap: 20px;
-        border-radius: 15px 15px;
-        a{
-            width: 100%;
-        }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    border-radius: 15px 15px;
+    a {
+      width: 100%;
     }
+  }
 }
 
-.bloc-restaurant{
-    background-color: #fff;
-    border-radius: 15px 15px;
-    height: 250px;
-    box-shadow: 0px 0px 8px $color-shadow;
-    position: relative;
-    img{
-        object-fit: cover;
-        width: 100%;
-        height: 70%;
-        border-radius: 15px 15px 0 0;
-        z-index: 1;
+.bloc-restaurant {
+  background-color: #fff;
+  border-radius: 15px 15px;
+  height: 250px;
+  box-shadow: 0px 0px 8px $color-shadow;
+  position: relative;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+    border-radius: 15px 15px 0 0;
+    z-index: 1;
+  }
+  .nouveau {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    color: $color-nouveau;
+    font-weight: bold;
+    background-color: $color-tertiaire;
+    z-index: 2;
+  }
+  &:hover {
+    @include hover-shadow;
+  }
+  .nav-br {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 29%;
+    padding-right: 20px;
+    .contenu-nbr {
+      h3 {
+        margin: 0 0 0 15px;
+      }
+      p {
+        margin: 5px 0 0 15px;
+      }
     }
-    .nouveau{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 8px 15px;
-        color: $color-nouveau;
-        font-weight: bold;
-        background-color: $color-tertiaire;
-        z-index: 2;
-    }
-    &:hover{
-        @include hover-shadow
-    }
-    .nav-br{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 29%;
-        padding-right: 20px;
-        .contenu-nbr{
-            h3{
-               margin: 0 0 0 15px;
-            }
-           p{
-              margin: 5px 0 0 15px;
-            }
-        }
-        @include coeur
-    }
+    @include coeur;
+  }
 }

@@ -1,27 +1,27 @@
-footer{
-    height: auto;
-    padding: 10px 30px;
+footer {
+  height: auto;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: $color-footer;
+  h5 {
+    margin: 20px 20px 20px 0;
+    font-size: 19px;
+    font-weight: normal;
+  }
+  ul {
+    line-height: 150%;
+    font-size: 110%;
+  }
+  .fa-solid {
+    padding-right: 11px;
+    font-size: 13px;
+  }
+  .fas {
+    padding-right: 12px;
+    font-size: 17px;
+  }
+  a {
     color: #fff;
-    background-color:$color-footer ;
-    h5{
-        margin: 20px;
-        font-size: 19px;
-        font-weight: normal;
-    }
-    ul{
-        line-height: 150%;
-        font-size: 110%;
-    }
-    .fa-solid{
-        padding-right: 11px;
-        font-size: 13px;
-        }
-    .fas{
-        padding-right: 12px;
-        font-size: 17px;
-    }
-    a{
-        color: #fff;
-        margin: 10px 0;
-    }
+    margin: 10px 0;
+  }
 }

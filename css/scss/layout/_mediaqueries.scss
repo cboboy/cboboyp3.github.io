@@ -1,40 +1,40 @@
 /* ------------------format tablette- & ordinateur----------- */
-@media screen and (min-width: 768px){
-    ul{
-        display: flex;
-        justify-content: space-between;
-    }
-    #ban-resto .br-nom{
-        justify-content: space-around;
-    }
-    #carte{
-        align-items: flex-start;
-    }
-    #restaurant #ecran-restaurant a{
-        width: 48%;
-    }
-    .bloc-restaurant{
-        height:40vw; /* rapport a width */
-        max-height: 350px;
-    }
+@media screen and (min-width: 768px) {
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #ban-resto .br-nom {
+    justify-content: space-around;
+  }
+  #carte {
+    align-items: flex-start;
+  }
+  #restaurant #ecran-restaurant a {
+    width: 49%;
+  }
+  .bloc-restaurant {
+    height: 40vw; /* rapport a width */
+    max-height: 350px;
+  }
 }
 
 /* ------------------format tablette------------------------ */
-@media screen and (min-width: 768px) and (max-width: 1200px){
-    .menu{
-        width: 49%;
-        &:last-child{
-            padding-top: 150px;
-        }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .menu {
+    width: 49%;
+    &:last-child {
+      padding-top: 150px;
     }
+  }
 }
 
 /* ------------------format ordinateur------------------------ */
-@media screen and (min-width: 1200px){
-    .menu{
-        width: 33%;
-        &:last-child{
-            width: 100%;
-        }
+@media screen and (min-width: 1200px) {
+  .menu {
+    width: 33%;
+    &:last-child {
+      width: 100%;
     }
+  }
 }
