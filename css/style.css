@@ -679,7 +679,7 @@ a {
 
 body {
   font-family: "roboto", sans-serif;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: auto;
   padding: 0; }
 
@@ -840,14 +840,14 @@ body {
     max-height: 350px; } }
 
 /* ------------------format tablette------------------------ */
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .menu {
     width: 49%; }
     .menu:last-child {
       padding-top: 150px; } }
 
 /* ------------------format ordinateur------------------------ */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .menu {
     width: 33%; }
     .menu:last-child {
