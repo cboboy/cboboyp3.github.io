@@ -792,6 +792,7 @@ body {
       justify-content: center;
       overflow: hidden;
       width: 0px;
+      transition: all 500ms;
       background-color: #99E2D0; }
       .menu .plat .plat_valid_check {
         display: flex;
